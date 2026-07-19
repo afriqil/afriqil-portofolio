@@ -79,7 +79,7 @@
                 <h1>Inside Airbnb NYC Market Analysis & Power BI Dashboard</h1>
 
                 <p class="project-hero-description">
-                    End-to-end data analyst portfolio project using Python, statistical analysis, dimensional modeling, DAX, and Power BI to analyze Airbnb market performance across New York City.
+                    An end-to-end analysis of Airbnb listings and calendar activity across New York City, designed to evaluate market supply, pricing, estimated occupancy, estimated revenue, location performance, room types, and host profiles.
                 </p>
 
                 <div class="hero-actions">
@@ -102,17 +102,17 @@
 
                 <div class="metadata-card">
                     <span>Dataset</span>
-                    <h3>Listings, Calendar, Neighbourhoods</h3>
+                    <h3>30,259 Listings, Calendar & Neighbourhoods</h3>
                 </div>
 
                 <div class="metadata-card">
                     <span>Data Volume</span>
-                    <h3>7.8M+ raw records</h3>
+                    <h3>11.15M+ calendar records</h3>
                 </div>
 
                 <div class="metadata-card">
                     <span>Tools</span>
-                    <h3>Python, Pandas, Power BI, DAX</h3>
+                    <h3>Python, Pandas, NumPy, SciPy, Power BI, DAX</h3>
                 </div>
 
                 <div class="metadata-card">
@@ -199,15 +199,15 @@
 
             <div class="content-card reveal">
                 <p>
-                    In this project, I analyzed Airbnb market data for New York City using an end-to-end data analyst workflow. I started by auditing and cleaning raw datasets, validating missing values, data types, duplicates, and key business fields such as price, availability, reviews, host attributes, location, and estimated revenue.
+                    I processed and audited more than 11.15 million calendar records together with 30,259 Airbnb listings across New York City. The workflow covered schema inspection, missing-value review, duplicate checks, technical sentinel validation, format standardization, and non-destructive cleaning of pricing, availability, review, host, and location fields.
                 </p>
 
                 <p>
-                    After preparing the data, I performed exploratory data analysis across boroughs, neighbourhoods, room types, pricing, availability, reviews, and estimated revenue. I also conducted statistical analysis to compare market performance across listing characteristics and prepared structured outputs for business interpretation.
+                    I integrated listing, calendar, and neighbourhood reference data, resolved snapshot inconsistencies, and engineered indicators for market activity, estimated occupancy, estimated annual revenue, room type, capacity, and host profile. Exploratory and statistical analyses were then used to compare performance across boroughs, neighbourhoods, listing segments, and host characteristics.
                 </p>
 
                 <p>
-                    For dashboard development, I created dashboard-ready fact and dimension tables, exported Power BI-ready CSV files, built DAX measures for KPIs, and designed a 4-page interactive Power BI dashboard to communicate market performance, pricing behavior, location trends, and host insights.
+                    For dashboard development, I created a fact-dimension star schema, exported validated Power BI-ready tables, and built DAX measures for supply, pricing, estimated occupancy, estimated revenue, ratings, and host performance. The final four-page dashboard communicates executive performance, geographic patterns, pricing and revenue, and host-level insights.
                 </p>
             </div>
         </section>
@@ -225,7 +225,7 @@
                     <span>01</span>
                     <div>
                         <h3>Data Audit and Cleaning</h3>
-                        <p>Checked schema, missing values, duplicates, data types, and cleaned important business fields.</p>
+                        <p>Audited schema, missing values, duplicates, data types, technical sentinel values, and critical business fields without deleting valid source records.</p>
                     </div>
                 </div>
 
@@ -233,7 +233,7 @@
                     <span>02</span>
                     <div>
                         <h3>EDA and Data Modeling</h3>
-                        <p>Explored listings by borough, neighbourhood, room type, pricing, availability, reviews, and revenue.</p>
+                        <p>Integrated listing, calendar, and neighbourhood data and engineered activity, occupancy, revenue, capacity, and host-profile indicators.</p>
                     </div>
                 </div>
 
@@ -241,7 +241,7 @@
                     <span>03</span>
                     <div>
                         <h3>Statistical Analysis</h3>
-                        <p>Compared market performance across listing characteristics and summarized statistical findings.</p>
+                        <p>Compared pricing and performance patterns across boroughs, room types, capacity groups, and host profiles while keeping estimated metrics clearly labeled.</p>
                     </div>
                 </div>
 
@@ -249,7 +249,7 @@
                     <span>04</span>
                     <div>
                         <h3>Dashboard Data Preparation</h3>
-                        <p>Created fact and dimension tables, KPI outputs, validation tables, and Power BI-ready CSV exports.</p>
+                        <p>Created fact and dimension tables, reusable KPI outputs, validation summaries, and Power BI-ready CSV exports.</p>
                     </div>
                 </div>
 
@@ -257,7 +257,7 @@
                     <span>05</span>
                     <div>
                         <h3>Power BI Dashboard Development</h3>
-                        <p>Built interactive report pages using DAX measures, slicers, KPI cards, and visual storytelling.</p>
+                        <p>Built four interactive report pages using DAX measures, slicers, KPI cards, comparative charts, and visual storytelling.</p>
                     </div>
                 </div>
 
@@ -265,7 +265,7 @@
                     <span>06</span>
                     <div>
                         <h3>Insight and Recommendation Writing</h3>
-                        <p>Translated analysis outputs into market insights and business recommendations.</p>
+                        <p>Translated numerical patterns into segmented pricing, host-performance, and listing-improvement recommendations while acknowledging analytical limitations.</p>
                     </div>
                 </div>
             </div>
@@ -281,28 +281,28 @@
 
             <div class="insight-grid">
                 <article class="insight-card reveal">
-                    <h3>Location concentration</h3>
-                    <p>Manhattan and Brooklyn dominate Airbnb listing supply across New York City.</p>
+                    <h3>Manhattan market leadership</h3>
+                    <p>Manhattan had the largest market supply, the highest median nightly price at approximately USD 240.56, and the highest median estimated annual revenue among active listings at USD 26,216.</p>
                 </article>
 
                 <article class="insight-card reveal">
-                    <h3>Revenue leadership</h3>
-                    <p>Manhattan generates the highest estimated revenue among NYC boroughs.</p>
+                    <h3>Brooklyn activity performance</h3>
+                    <p>Brooklyn recorded the highest positive-activity rate at 46.65% and the highest median estimated occupancy at 49.32% among active listings.</p>
                 </article>
 
                 <article class="insight-card reveal">
-                    <h3>Room type mix</h3>
-                    <p>Entire homes/apartments represent the largest share of Airbnb listings.</p>
+                    <h3>Superhost performance gap</h3>
+                    <p>Superhost listings achieved a 73.98% positive-activity rate compared with 32.08% for non-Superhosts, alongside higher median estimated annual revenue.</p>
                 </article>
 
                 <article class="insight-card reveal">
-                    <h3>Pricing variation</h3>
-                    <p>Pricing and revenue vary significantly by room type, capacity, location, and host profile.</p>
+                    <h3>Hotel-room price-demand imbalance</h3>
+                    <p>Hotel rooms commanded the highest median nightly price at approximately USD 447 but showed considerably lower estimated occupancy, indicating a potential pricing imbalance.</p>
                 </article>
 
                 <article class="insight-card reveal">
-                    <h3>Host profile effect</h3>
-                    <p>Superhost and host portfolio segments show different revenue and performance patterns.</p>
+                    <h3>Estimated metrics require caution</h3>
+                    <p>Calendar-derived occupancy and revenue are analytical estimates rather than confirmed booking or payment records, so the results should be interpreted as directional evidence.</p>
                 </article>
             </div>
         </section>
@@ -318,27 +318,27 @@
             <div class="recommendation-grid">
                 <div class="recommendation-card reveal">
                     <h3>Segment pricing strategy</h3>
-                    <p>Apply pricing strategies by borough and room type instead of using a single market-wide pricing approach.</p>
+                    <p>Develop pricing benchmarks by borough, neighbourhood, and room type instead of applying one market-wide pricing rule.</p>
                 </div>
 
                 <div class="recommendation-card reveal">
-                    <h3>Separate supply and revenue markets</h3>
-                    <p>Monitor high-revenue neighbourhoods separately from high-supply neighbourhoods because the two do not always overlap.</p>
+                    <h3>Replicate high-performing host practices</h3>
+                    <p>Investigate and replicate the operational practices of high-performing Superhosts, including listing quality, communication, availability management, and guest experience.</p>
                 </div>
 
                 <div class="recommendation-card reveal">
-                    <h3>Use capacity segmentation</h3>
-                    <p>Evaluate capacity and room type together to better understand revenue optimization opportunities.</p>
+                    <h3>Prioritize low-activity listings</h3>
+                    <p>Use dashboard filters to identify low-activity listings and evaluate price, room type, location, capacity, and host characteristics together.</p>
                 </div>
 
                 <div class="recommendation-card reveal">
-                    <h3>Compare host performance</h3>
-                    <p>Use superhost and host portfolio segmentation to understand differences in revenue, listing volume, and guest experience.</p>
+                    <h3>Reassess premium hotel pricing</h3>
+                    <p>Test narrower pricing ranges for premium hotel-room listings where high nightly rates coincide with weak estimated occupancy.</p>
                 </div>
 
                 <div class="recommendation-card reveal">
-                    <h3>Enable area-level decisions</h3>
-                    <p>Use dashboard filters to support borough, neighbourhood, room type, and host-segment analysis.</p>
+                    <h3>Monitor pricing experiments</h3>
+                    <p>Track activity, estimated occupancy, estimated revenue, and price changes before scaling any pricing or listing intervention.</p>
                 </div>
             </div>
         </section>
@@ -354,27 +354,27 @@
             <div class="technical-highlight-grid">
                 <div class="technical-highlight-card reveal">
                     <h3>Star Schema Model</h3>
-                    <p>Created a dashboard-ready data model using fact_listing and dimension tables.</p>
+                    <p>Created a dashboard-ready star schema using fact listing data and validated dimension tables for consistent filtering and aggregation.</p>
                 </div>
 
                 <div class="technical-highlight-card reveal">
                     <h3>DAX Measures</h3>
-                    <p>Built KPI measures for listings, revenue, average price, rating, host metrics, and superhost share.</p>
+                    <p>Built DAX measures for listing supply, pricing, estimated occupancy, estimated revenue, ratings, and host-performance indicators.</p>
                 </div>
 
                 <div class="technical-highlight-card reveal">
                     <h3>Power BI Interactivity</h3>
-                    <p>Used slicers, KPI cards, bar charts, donut charts, scatter plots, and dashboard storytelling.</p>
+                    <p>Designed four interactive pages combining slicers, KPI cards, comparative charts, and visual storytelling for business users.</p>
                 </div>
 
                 <div class="technical-highlight-card reveal">
                     <h3>Git LFS</h3>
-                    <p>Managed large raw datasets, processed outputs, and Power BI files with Git LFS.</p>
+                    <p>Organized notebooks, processed outputs, documentation, and large project files to support reproducibility and portfolio review.</p>
                 </div>
 
                 <div class="technical-highlight-card reveal">
                     <h3>Dashboard Exports</h3>
-                    <p>Prepared Power BI-ready CSV files and dashboard validation outputs from Python notebooks.</p>
+                    <p>Prepared validated Power BI-ready tables and cross-checked dashboard metrics against Python summaries before presentation.</p>
                 </div>
             </div>
         </section>

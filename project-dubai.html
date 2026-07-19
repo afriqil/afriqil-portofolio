@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dubai Residential Property Market Analysis | Afriqil Wildan</title>
+
+    <meta name="title" content="Dubai Residential Property Market Analysis | Afriqil Wildan">
+    <meta name="description" content="Dubai residential property market analysis case study using Python, SQL, statistical analysis, data-quality validation, and Power BI to evaluate pricing, location, property type, infrastructure, and transaction patterns.">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://afriqil.github.io/afriqil-portofolio/project-dubai.html">
+    <meta property="og:title" content="Dubai Residential Property Market Analysis | Afriqil Wildan">
+    <meta property="og:description" content="An end-to-end analysis of 18,085 Dubai residential property transactions recorded from January to July 2026.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/afriqil/Dubai-Residential-Property-Market-Analysis/main/images/dashboard_overview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://afriqil.github.io/afriqil-portofolio/project-dubai.html">
+    <meta name="twitter:title" content="Dubai Residential Property Market Analysis | Afriqil Wildan">
+    <meta name="twitter:description" content="Explore a Dubai residential property case study covering prices, property types, areas, infrastructure, transaction quality, and market segmentation.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/afriqil/Dubai-Residential-Property-Market-Analysis/main/images/dashboard_overview.png">
+
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="theme-color" content="#07111f">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="nav-logo">
+            Afriqil<span>.</span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#skills" class="nav-link">Skills</a>
+            <a href="index.html#projects" class="nav-link active">Projects</a>
+            <a href="index.html#resume" class="nav-link">Resume</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+                <span id="themeIcon">🌙</span>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PROJECT HERO -->
+        <section class="section project-hero">
+            <div class="project-hero-content reveal">
+                <p class="section-label">Real Estate Analytics Case Study</p>
+
+                <h1>Dubai Residential Property Market Analysis (2026)</h1>
+
+                <p class="project-hero-description">
+                    An end-to-end analysis of 18,085 residential property transactions recorded across Dubai from January to July 2026, designed to evaluate price patterns, property types, geographic differences, transaction categories, nearby infrastructure, market concentration, and data-quality risks.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="https://github.com/afriqil/Dubai-Residential-Property-Market-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub Repository</a>
+                    <a href="https://github.com/afriqil/Dubai-Residential-Property-Market-Analysis/tree/main/images" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Dashboard Images</a>
+                    <a href="assets/Portofolio_Afriqil_Wildan.pdf" target="_blank" class="btn btn-secondary">Portfolio PDF</a>
+                    <a href="index.html#projects" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJECT METADATA -->
+        <section class="section project-overview">
+            <div class="metadata-grid reveal">
+                <div class="metadata-card">
+                    <span>Role</span>
+                    <h3>Data Analyst</h3>
+                </div>
+
+                <div class="metadata-card">
+                    <span>Dataset</span>
+                    <h3>Dubai Residential Transactions</h3>
+                </div>
+
+                <div class="metadata-card">
+                    <span>Data Volume</span>
+                    <h3>18,085 transactions</h3>
+                </div>
+
+                <div class="metadata-card">
+                    <span>Tools</span>
+                    <h3>Python, Pandas, NumPy, SciPy, SQL, Power BI</h3>
+                </div>
+
+                <div class="metadata-card">
+                    <span>Methods</span>
+                    <h3>EDA, ANOVA, Correlation &amp; Quality Flagging</h3>
+                </div>
+
+                <div class="metadata-card">
+                    <span>Output</span>
+                    <h3>4-page Power BI Dashboard</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- DASHBOARD CAROUSEL -->
+        <section class="section dashboard-case-study">
+            <div class="section-heading reveal">
+                <p class="section-label">Dashboard Preview</p>
+                <h2>Power BI dashboard pages.</h2>
+            </div>
+
+            <div class="carousel reveal">
+                <button class="carousel-btn prev" aria-label="Previous dashboard image">‹</button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img
+                                src="assets/dubai/001.jpg"
+                                alt="Dubai Residential Property Market Overview dashboard"
+                            />
+                            <p>01 Market Overview</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img
+                                src="assets/dubai/002.jpg"
+                                alt="Dubai Property Price and Area Analysis dashboard"
+                            />
+                            <p>02 Price &amp; Area Analysis</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img
+                                src="assets/dubai/003.jpg"
+                                alt="Dubai Property Type Analysis dashboard"
+                            />
+                            <p>03 Property Type Analysis</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img
+                                src="assets/dubai/004.jpg"
+                                data-preview="assets/dubai/004.jpg"
+                                alt="Dubai Property Monthly Trend dashboard"
+                            />
+                            <p>04 Monthly Trend</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" aria-label="Next dashboard image">›</button>
+            </div>
+
+            <div class="carousel-dots reveal">
+                <button class="carousel-dot active" aria-label="Go to slide 1"></button>
+                <button class="carousel-dot" aria-label="Go to slide 2"></button>
+                <button class="carousel-dot" aria-label="Go to slide 3"></button>
+                <button class="carousel-dot" aria-label="Go to slide 4"></button>
+            </div>
+        </section>
+
+
+        <!-- WHAT I DID -->
+        <section class="section case-section">
+            <div class="section-heading reveal">
+                <p class="section-label">What I Did</p>
+                <h2>End-to-end real estate analytics workflow.</h2>
+            </div>
+
+            <div class="content-card reveal">
+                <p>
+                    I processed and analysed 18,085 residential property transactions recorded across Dubai from January to July 2026. The data-preparation process standardised transaction dates, property types, locations, transaction categories, prices, property sizes, and nearby-infrastructure attributes while preserving the original records for traceability.
+                </p>
+
+                <p>
+                    I performed exploratory and statistical analysis to evaluate transaction distribution, price per square metre, total transaction value, property-type differences, geographic price concentration, monthly patterns, and the relationship between property size and value. Suspicious observations were identified through transparent data-quality flags rather than being automatically deleted.
+                </p>
+
+                <p>
+                    For reporting, I prepared structured analytical outputs using Python and SQL, then developed a four-page Power BI dashboard covering market overview, price and area analysis, property-type performance, and monthly trends. The final interpretation translated the results into valuation and market-segmentation recommendations while distinguishing statistical association from direct causation.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- WORKFLOW -->
+        <section class="section case-section">
+            <div class="section-heading reveal">
+                <p class="section-label">Workflow</p>
+                <h2>Project process.</h2>
+            </div>
+
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <span>01</span>
+                    <div>
+                        <h3>Data Audit and Standardisation</h3>
+                        <p>Reviewed schema, missing values, dates, property labels, locations, prices, areas, transaction categories, and infrastructure attributes.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span>02</span>
+                    <div>
+                        <h3>Quality Flagging and Validation</h3>
+                        <p>Identified suspicious transaction values, extreme distributions, incomplete fields, and potentially inconsistent records without deleting the source data.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span>03</span>
+                    <div>
+                        <h3>Feature Engineering and EDA</h3>
+                        <p>Created price, size, time, transaction, and market segments to compare property performance across categories and geographic areas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span>04</span>
+                    <div>
+                        <h3>Statistical Analysis</h3>
+                        <p>Applied ANOVA and Pearson correlation to evaluate property-type differences and relationships between size, price per square metre, and total value.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span>05</span>
+                    <div>
+                        <h3>SQL and Dashboard Preparation</h3>
+                        <p>Prepared reusable summary queries, area rankings, property-type outputs, monthly summaries, and dashboard-ready tables for Power BI.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span>06</span>
+                    <div>
+                        <h3>Insight and Recommendation Writing</h3>
+                        <p>Translated market patterns into pricing and valuation guidance while documenting sample-size thresholds, skewness, and causal limitations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- KEY INSIGHTS -->
+        <section class="section case-section">
+            <div class="section-heading reveal">
+                <p class="section-label">Key Insights</p>
+                <h2>What the analysis revealed.</h2>
+            </div>
+
+            <div class="insight-grid">
+                <article class="insight-card reveal">
+                    <h3>Flats dominated transaction volume</h3>
+                    <p>Flats represented approximately 88.1% of all recorded transactions, making apartment-type properties the dominant market segment in the dataset.</p>
+                </article>
+
+                <article class="insight-card reveal">
+                    <h3>Property type affected unit pricing</h3>
+                    <p>ANOVA indicated statistically significant differences in price per square metre across property types (F = 427.87, p &lt; 0.001).</p>
+                </article>
+
+                <article class="insight-card reveal">
+                    <h3>Bluewaters led the qualified area ranking</h3>
+                    <p>After applying a minimum threshold of 20 transactions, Bluewaters recorded the highest average price at approximately AED 57.6K per square metre.</p>
+                </article>
+
+                <article class="insight-card reveal">
+                    <h3>Size explained total value more than unit rate</h3>
+                    <p>Property size had a weak relationship with price per square metre (r = 0.114) but a strong relationship with total transaction value (r = 0.753).</p>
+                </article>
+
+                <article class="insight-card reveal">
+                    <h3>Recorded infrastructure access aligned with premiums</h3>
+                    <p>Properties with recorded nearby metro stations or malls showed an average price premium of approximately 34%, although this association does not establish causation.</p>
+                </article>
+
+                <article class="insight-card reveal">
+                    <h3>Standard sales were the dominant transaction type</h3>
+                    <p>Standard sales accounted for approximately 83.4% of the recorded transactions, indicating a strong concentration in the main sales category.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- BUSINESS RECOMMENDATIONS -->
+        <section class="section case-section">
+            <div class="section-heading reveal">
+                <p class="section-label">Business Recommendations</p>
+                <h2>Recommended actions from the analysis.</h2>
+            </div>
+
+            <div class="recommendation-grid">
+                <div class="recommendation-card reveal">
+                    <h3>Prioritise location and property type</h3>
+                    <p>Use geographic area and property type as primary valuation variables because they explain unit-price differences more clearly than property size alone.</p>
+                </div>
+
+                <div class="recommendation-card reveal">
+                    <h3>Apply minimum sample thresholds</h3>
+                    <p>Rank areas only after applying a minimum transaction count and display the sample size to prevent decisions based on isolated high-value observations.</p>
+                </div>
+
+                <div class="recommendation-card reveal">
+                    <h3>Use median prices for skewed markets</h3>
+                    <p>Prioritise median price indicators alongside averages because luxury transactions create strongly right-skewed price and value distributions.</p>
+                </div>
+
+                <div class="recommendation-card reveal">
+                    <h3>Separate suspicious records before aggregation</h3>
+                    <p>Keep flagged records traceable, but exclude or analyse them separately when calculating market benchmarks and area-level averages.</p>
+                </div>
+
+                <div class="recommendation-card reveal">
+                    <h3>Treat infrastructure as a market indicator</h3>
+                    <p>Use metro and mall access as indicators of established locations, but avoid claiming a direct causal premium without additional geospatial controls.</p>
+                </div>
+
+                <div class="recommendation-card reveal">
+                    <h3>Expand the valuation model</h3>
+                    <p>Add bedroom count, building age, completion status, exact coordinates, developer, and project-level attributes to improve future pricing and investment analysis.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- TECHNICAL HIGHLIGHTS -->
+        <section class="section case-section">
+            <div class="section-heading reveal">
+                <p class="section-label">Technical Highlights</p>
+                <h2>Technical work behind the dashboard.</h2>
+            </div>
+
+            <div class="technical-highlight-grid">
+                <div class="technical-highlight-card reveal">
+                    <h3>Non-Destructive Data Cleaning</h3>
+                    <p>Standardised dates, categories, prices, sizes, and locations while retaining source records and creating explicit quality flags.</p>
+                </div>
+
+                <div class="technical-highlight-card reveal">
+                    <h3>Feature Engineering</h3>
+                    <p>Created price-per-square-metre, market segment, time, transaction-type, infrastructure, and data-quality variables for analysis.</p>
+                </div>
+
+                <div class="technical-highlight-card reveal">
+                    <h3>ANOVA</h3>
+                    <p>Tested whether price per square metre differed significantly across residential property-type groups.</p>
+                </div>
+
+                <div class="technical-highlight-card reveal">
+                    <h3>Pearson Correlation</h3>
+                    <p>Measured relationships between property size, price per square metre, and total transaction value.</p>
+                </div>
+
+                <div class="technical-highlight-card reveal">
+                    <h3>SQL Summary Analysis</h3>
+                    <p>Prepared reusable queries for market overview, area pricing, property types, price categories, monthly trends, and top-value locations.</p>
+                </div>
+
+                <div class="technical-highlight-card reveal">
+                    <h3>Power BI Dashboard</h3>
+                    <p>Developed market-overview, location, property-type, and monthly-trend pages with filters, KPIs, rankings, and interactive visual analysis.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA -->
+        <section class="section resume">
+            <div class="resume-card reveal">
+                <p class="section-label">Explore More</p>
+                <h2>View the full portfolio or return to projects.</h2>
+
+                <div class="resume-actions">
+                    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+                    <a href="assets/CV_Afriqil_Wildan.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+                    <a href="assets/Portofolio_Afriqil_Wildan.pdf" target="_blank" class="btn btn-secondary">Download Portfolio PDF</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- IMAGE MODAL -->
+    <div class="image-modal">
+        <button class="modal-close" aria-label="Close image modal">×</button>
+        <img src="" alt="Dashboard full preview" class="modal-image" />
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Afriqil Wildan. Data Analyst Portfolio.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="https://www.linkedin.com/in/afriqil-wildan-b7bbb6221/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/afriqil" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="assets/CV_Afriqil_Wildan.pdf" target="_blank">Download CV</a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
