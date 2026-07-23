@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   NYC Yellow Taxi SQL Analysis | Afriqil Wildan
+  </title>
+  <meta content="NYC Yellow Taxi SQL portfolio project analyzing 30.9M+ trip records with Google BigQuery, GoogleSQL, data-quality auditing, window functions, zone and route analysis, and credit-card tipping insights." name="description"/>
+  <!-- Primary Meta Tags -->
+  <title>
+   NYC Yellow Taxi SQL Analysis | Afriqil Wildan
+  </title>
+  <meta content="NYC Yellow Taxi SQL Analysis | Afriqil Wildan" name="title"/>
+  <meta content="Personal data analyst portfolio showcasing Python, SQL, Power BI dashboards, case studies, resume, and end-to-end analytics projects." name="description"/>
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta content="website" property="og:type"/>
+  <meta content="https://afriqil.github.io/afriqil-portofolio/project-taxi.html" property="og:url"/>
+  <meta content="NYC Yellow Taxi SQL Analysis | Afriqil Wildan" property="og:title"/>
+  <meta content="Explore a large-scale SQL case study of 30.9M+ NYC Yellow Taxi trip records using Google BigQuery and GoogleSQL." property="og:description"/>
+  <meta content="https://afriqil.github.io/afriqil-portofolio/assets/taxi/01_monthly_trip_trend.png" property="og:image"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <!-- Twitter / X -->
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://afriqil.github.io/afriqil-portofolio/project-taxi.html" name="twitter:url"/>
+  <meta content="NYC Yellow Taxi SQL Analysis | Afriqil Wildan" name="twitter:title"/>
+  <meta content="Large-scale SQL analysis of 30.9M+ NYC Yellow Taxi trip records using Google BigQuery and GoogleSQL." name="twitter:description"/>
+  <meta content="https://afriqil.github.io/afriqil-portofolio/assets/taxi/01_monthly_trip_trend.png" name="twitter:image"/>
+  <link href="assets/favicon.ico" rel="icon"/>
+  <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="assets/site.webmanifest" rel="manifest"/>
+  <meta content="#07111f" name="theme-color"/>
+  <link href="style.css" rel="stylesheet">
+  </link>
+ </head>
+ <body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+   <a class="nav-logo" href="index.html">
+    Afriqil
+    <span>
+     .
+    </span>
+   </a>
+   <nav class="nav-menu" id="navMenu">
+    <a class="nav-link" href="index.html#home">
+     Home
+    </a>
+    <a class="nav-link" href="index.html#about">
+     About
+    </a>
+    <a class="nav-link" href="index.html#skills">
+     Skills
+    </a>
+    <a class="nav-link active" href="index.html#projects">
+     Projects
+    </a>
+    <a class="nav-link" href="index.html#resume">
+     Resume
+    </a>
+    <a class="nav-link" href="index.html#contact">
+     Contact
+    </a>
+   </nav>
+   <div class="nav-actions">
+    <button aria-label="Toggle dark and light mode" class="theme-toggle" id="themeToggle">
+     <span id="themeIcon">
+      🌙
+     </span>
+    </button>
+    <button aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+   </div>
+  </header>
+  <main>
+   <!-- PROJECT HERO -->
+   <section class="section project-hero">
+    <div class="project-hero-content reveal">
+     <p class="section-label">
+      SQL Case Study
+     </p>
+     <h1>
+      NYC Yellow Taxi Demand &amp; Transaction Analysis
+     </h1>
+     <p class="project-hero-description">
+      A large-scale SQL analysis of 30.9M+ NYC Yellow Taxi trip records using Google BigQuery and GoogleSQL. The project audits data quality, creates a reusable cleaned analytical view, and evaluates demand, recorded transaction value, pickup zones, routes, payment methods, and credit-card tipping patterns.
+     </p>
+     <div class="hero-actions">
+      <a class="btn btn-primary" href="https://github.com/afriqil/nyc-taxi-sql-portfolio" target="_blank">
+       GitHub Repository
+      </a>
+      <a class="btn btn-secondary" href="https://console.cloud.google.com/marketplace/product/city-of-new-york/nyc-tlc-trips" target="_blank">
+       Dataset Source
+      </a>
+      <a class="btn btn-secondary" href="assets/Portofolio_Afriqil_Wildan.pdf" target="_blank">
+       Portfolio PDF
+      </a>
+      <a class="btn btn-secondary" href="index.html#projects">
+       Back to Home
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- PROJECT METADATA -->
+   <section class="section project-overview">
+    <div class="metadata-grid reveal">
+     <div class="metadata-card">
+      <span>
+       Role
+      </span>
+      <h3>
+       Data Analyst
+      </h3>
+     </div>
+     <div class="metadata-card">
+      <span>
+       Dataset
+      </span>
+      <h3>
+       NYC Yellow Taxi Trips &amp; Taxi Zones
+      </h3>
+     </div>
+     <div class="metadata-card">
+      <span>
+       Data Volume
+      </span>
+      <h3>
+       30.9M+ Raw Trip Records
+      </h3>
+     </div>
+     <div class="metadata-card">
+      <span>
+       Tools
+      </span>
+      <h3>
+       Google BigQuery, GoogleSQL, Excel
+      </h3>
+     </div>
+     <div class="metadata-card">
+      <span>
+       Model
+      </span>
+      <h3>
+       Cleaned Analytical View
+      </h3>
+     </div>
+     <div class="metadata-card">
+      <span>
+       Output
+      </span>
+      <h3>
+       10 SQL Scripts, 7 CSV Files, 4 Visualizations
+      </h3>
+     </div>
+    </div>
+   </section>
+   <!-- DASHBOARD CAROUSEL -->
+   <section class="section dashboard-case-study">
+    <div class="section-heading reveal">
+     <p class="section-label">
+      Analysis Preview
+     </p>
+     <h2>
+      SQL analysis visualizations.
+     </h2>
+    </div>
+    <div class="carousel reveal">
+     <button aria-label="Previous dashboard image" class="carousel-btn prev">
+      ‹
+     </button>
+     <div class="carousel-window">
+      <div class="carousel-track">
+       <div class="carousel-slide">
+        <img alt="Monthly Yellow Taxi trip-volume trend in 2021" data-preview="assets/taxi/01_monthly_trip_trend.png" src="assets/taxi/01_monthly_trip_trend.png"/>
+        <p>
+         01 Monthly Trip Trend
+        </p>
+       </div>
+       <div class="carousel-slide">
+        <img alt="Average hourly taxi demand for weekdays and weekends" data-preview="assets/taxi/02_hourly_demand_weekday_weekend.png" src="assets/taxi/02_hourly_demand_weekday_weekend.png"/>
+        <p>
+         02 Hourly Demand: Weekday vs Weekend
+        </p>
+       </div>
+       <div class="carousel-slide">
+        <img alt="Top ten NYC Yellow Taxi pickup zones by trip volume" data-preview="assets/taxi/03_top_pickup_zones.png" src="assets/taxi/03_top_pickup_zones.png"/>
+        <p>
+         03 Top Pickup Zones
+        </p>
+       </div>
+       <div class="carousel-slide">
+        <img alt="Credit-card tip patterns by trip-distance band" data-preview="assets/taxi/04_tip_by_distance_band.png" src="assets/taxi/04_tip_by_distance_band.png"/>
+        <p>
+         04 Tip Patterns by Distance
+        </p>
+       </div>
+      </div>
+     </div>
+     <button aria-label="Next dashboard image" class="carousel-btn next">
+      ›
+     </button>
+    </div>
+    <div class="carousel-dots reveal">
+     <button aria-label="Go to slide 1" class="carousel-dot active">
+     </button>
+     <button aria-label="Go to slide 2" class="carousel-dot">
+     </button>
+     <button aria-label="Go to slide 3" class="carousel-dot">
+     </button>
+     <button aria-label="Go to slide 4" class="carousel-dot">
+     </button>
+    </div>
+   </section>
+   <!-- WHAT I DID -->
+   <section class="section case-section">
+    <div class="section-heading reveal">
+     <p class="section-label">
+      What I Did
+     </p>
+     <h2>
+      Large-scale SQL analytics workflow.
+     </h2>
+    </div>
+    <div class="content-card reveal">
+     <p>
+      I queried the NYC Yellow Taxi public dataset directly in Google BigQuery and audited 30.9 million raw trip records. Before analysis, I inspected the schema, compared available annual tables, verified monthly coverage, and selected 2021 because it provided a complete January-to-December period.
+     </p>
+     <p>
+      I built a reusable cleaned analytical view that removed invalid timestamps, nonpositive distance and monetary values, and operationally implausible outliers. The final view retained 30,222,103 trips, or 97.79% of the raw records, while preserving zero and null passenger counts because passenger volume was not required for the main analysis.
+     </p>
+     <p>
+      Using CTEs, conditional aggregation, date functions, SAFE_DIVIDE, APPROX_QUANTILES, joins, LAG, and ROW_NUMBER, I analyzed monthly and hourly demand, weekday-versus-weekend behavior, pickup zones, directional routes, payment methods, and credit-card tipping. I exported only aggregated results to CSV, created four supporting Excel visuals, and documented cleaning rules, data definitions, and interpretation limitations.
+     </p>
+    </div>
+   </section>
+   <!-- WORKFLOW -->
+   <section class="section case-section">
+    <div class="section-heading reveal">
+     <p class="section-label">
+      Workflow
+     </p>
+     <h2>
+      Project process.
+     </h2>
+    </div>
+    <div class="timeline reveal">
+     <div class="timeline-item">
+      <span>
+       01
+      </span>
+      <div>
+       <h3>
+        Data Understanding and Period Selection
+       </h3>
+       <p>
+        Inspected public tables, schema, sample records, date coverage, and monthly completeness before selecting the 2021 Yellow Taxi table.
+       </p>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <span>
+       02
+      </span>
+      <div>
+       <h3>
+        Data Quality and Outlier Audit
+       </h3>
+       <p>
+        Measured invalid timestamps, nonpositive trip values, missing passenger counts, extreme durations, distances, speeds, and transaction amounts.
+       </p>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <span>
+       03
+      </span>
+      <div>
+       <h3>
+        Cleaned BigQuery View
+       </h3>
+       <p>
+        Created a reusable analytical view with validated trips, derived time fields, occupied-trip duration, average speed, and amount-per-mile and amount-per-minute metrics.
+       </p>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <span>
+       04
+      </span>
+      <div>
+       <h3>
+        Time and Demand Analysis
+       </h3>
+       <p>
+        Compared monthly growth, average daily demand, weekday and weekend patterns, and hourly peaks using aggregate and window functions.
+       </p>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <span>
+       05
+      </span>
+      <div>
+       <h3>
+        Zone, Route, Payment, and Tip Analysis
+       </h3>
+       <p>
+        Deduplicated the taxi-zone dimension, validated join coverage, ranked pickup zones and directional routes, and analyzed recorded payment and card-tip behavior.
+       </p>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <span>
+       06
+      </span>
+      <div>
+       <h3>
+        Result Export and Documentation
+       </h3>
+       <p>
+        Exported seven aggregated CSV files, created four Excel visualizations, and documented definitions, cleaning assumptions, limitations, and reproducibility steps.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- KEY INSIGHTS -->
+   <section class="section case-section">
+    <div class="section-heading reveal">
+     <p class="section-label">
+      Key Insights
+     </p>
+     <h2>
+      What the SQL analysis revealed.
+     </h2>
+    </div>
+    <div class="insight-grid">
+     <article class="insight-card reveal">
+      <h3>
+       November recorded the highest demand
+      </h3>
+      <p>
+       November reached 3.41 million trips, averaged 113,724 trips per day, and generated approximately USD 70.66 million in recorded transaction value.
+      </p>
+     </article>
+     <article class="insight-card reveal">
+      <h3>
+       Weekday and weekend peaks differed
+      </h3>
+      <p>
+       Weekday demand peaked at 18:00 with 6,328 average trips per day for that hour, while weekend demand peaked earlier at 15:00 with 5,071.
+      </p>
+     </article>
+     <article class="insight-card reveal">
+      <h3>
+       Trip volume and transaction value told different stories
+      </h3>
+      <p>
+       Upper East Side South had the highest pickup volume at 1.54 million trips, while JFK Airport produced the highest total recorded amount at USD 58.20 million.
+      </p>
+     </article>
+     <article class="insight-card reveal">
+      <h3>
+       Short Manhattan routes dominated route activity
+      </h3>
+      <p>
+       Upper East Side South to Upper East Side North recorded 224,721 trips and the highest route-level recorded amount at approximately USD 2.66 million.
+      </p>
+     </article>
+     <article class="insight-card reveal">
+      <h3>
+       Card tips increased in dollars but declined as a fare ratio
+      </h3>
+      <p>
+       Credit cards represented 73.42% of cleaned trips. Across card trips, average tip amount increased with distance, while the aggregate tip-to-fare ratio declined from 32.17% to 17.24%.
+      </p>
+     </article>
+    </div>
+   </section>
+   <!-- BUSINESS RECOMMENDATIONS -->
+   <section class="section case-section">
+    <div class="section-heading reveal">
+     <p class="section-label">
+      Business Recommendations
+     </p>
+     <h2>
+      Operational implications from the analysis.
+     </h2>
+    </div>
+    <div class="recommendation-grid">
+     <div class="recommendation-card reveal">
+      <h3>
+       Match fleet positioning to day-type demand
+      </h3>
+      <p>
+       Use separate weekday and weekend schedules because the strongest pickup periods occur at different hours, with weekday demand peaking later.
+      </p>
+     </div>
+     <div class="recommendation-card reveal">
+      <h3>
+       Separate volume and transaction-value strategies
+      </h3>
+      <p>
+       Treat high-frequency Manhattan zones and high-value airport zones as different operating segments rather than ranking locations with one metric.
+      </p>
+     </div>
+     <div class="recommendation-card reveal">
+      <h3>
+       Use volume thresholds with efficiency metrics
+      </h3>
+      <p>
+       Evaluate amount-per-minute or amount-per-mile only alongside trip volume, distance, and duration so short trips with small denominators do not dominate decisions.
+      </p>
+     </div>
+     <div class="recommendation-card reveal">
+      <h3>
+       Interpret tipping results as card-only behavior
+      </h3>
+      <p>
+       Use the tipping findings for recorded credit-card transactions and avoid comparing them directly with cash tips, which may not be fully captured.
+      </p>
+     </div>
+     <div class="recommendation-card reveal">
+      <h3>
+       Add external operational data before deployment
+      </h3>
+      <p>
+       Combine the trip data with taxi supply, traffic, weather, event, airport-queue, and empty-mile information before making driver-profit or fleet-allocation claims.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- TECHNICAL HIGHLIGHTS -->
+   <section class="section case-section">
+    <div class="section-heading reveal">
+     <p class="section-label">
+      Technical Highlights
+     </p>
+     <h2>
+      Technical work behind the SQL case study.
+     </h2>
+    </div>
+    <div class="technical-highlight-grid">
+     <div class="technical-highlight-card reveal">
+      <h3>
+       Large-Scale BigQuery SQL
+      </h3>
+      <p>
+       Queried and analyzed more than 30 million public trip records directly in BigQuery without downloading the raw dataset.
+      </p>
+     </div>
+     <div class="technical-highlight-card reveal">
+      <h3>
+       Data Quality and Outlier Auditing
+      </h3>
+      <p>
+       Used COUNTIF, APPROX_QUANTILES, timestamp calculations, and candidate thresholds to quantify and document invalid and extreme records.
+      </p>
+     </div>
+     <div class="technical-highlight-card reveal">
+      <h3>
+       Window Functions and Trend Analysis
+      </h3>
+      <p>
+       Applied LAG and ROW_NUMBER to calculate month-over-month growth and identify leading months, hours, zones, and routes.
+      </p>
+     </div>
+     <div class="technical-highlight-card reveal">
+      <h3>
+       Dimension Join Validation
+      </h3>
+      <p>
+       Detected duplicate taxi-zone IDs, deduplicated the reference table, measured a 99.08% pickup-zone match rate, and prevented one-to-many row inflation.
+      </p>
+     </div>
+     <div class="technical-highlight-card reveal">
+      <h3>
+       Reproducible SQL Documentation
+      </h3>
+      <p>
+       Organized ten SQL scripts, seven result exports, cleaning rules, a data dictionary, limitations, and a repository-level analytical README.
+      </p>
+     </div>
+    </div>
+   </section>
+   <!-- CTA -->
+   <section class="section resume">
+    <div class="resume-card reveal">
+     <p class="section-label">
+      Explore More
+     </p>
+     <h2>
+      Review the SQL repository or return to projects.
+     </h2>
+     <div class="resume-actions">
+      <a class="btn btn-primary" href="index.html#projects">
+       Back to Projects
+      </a>
+      <a class="btn btn-secondary" href="https://github.com/afriqil/nyc-taxi-sql-portfolio" target="_blank">
+       GitHub Repository
+      </a>
+      <a class="btn btn-secondary" href="assets/CV_Afriqil_Wildan.pdf" target="_blank">
+       Download CV
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- IMAGE MODAL -->
+  <div class="image-modal">
+   <button aria-label="Close image modal" class="modal-close">
+    ×
+   </button>
+   <img alt="NYC Yellow Taxi analysis full preview" class="modal-image" src=""/>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+   <p>
+    © 2026 Afriqil Wildan. Data Analyst Portfolio.
+   </p>
+   <div class="footer-links">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="https://www.linkedin.com/in/afriqil-wildan-b7bbb6221/" target="_blank">
+     LinkedIn
+    </a>
+    <a href="https://github.com/afriqil" target="_blank">
+     GitHub
+    </a>
+    <a href="assets/CV_Afriqil_Wildan.pdf" target="_blank">
+     Download CV
+    </a>
+   </div>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
