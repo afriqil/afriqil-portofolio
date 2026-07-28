@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <title>PaySim Fraud & AML Compliance Analytics | Afriqil Wildan</title>
+  <meta name="title" content="PaySim Fraud & AML Compliance Analytics | Afriqil Wildan"/>
+  <meta name="description" content="End-to-end fraud and AML-oriented analytics case study using 6.36M synthetic mobile-money transactions, Python, SQL, machine learning, and Power BI."/>
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://afriqil.github.io/afriqil-portofolio/project-paysim.html"/>
+  <meta property="og:title" content="PaySim Fraud & AML Compliance Analytics | Afriqil Wildan"/>
+  <meta property="og:description" content="Explore an end-to-end fraud and AML-oriented transaction-monitoring case study using Python, SQL, machine learning, and Power BI."/>
+  <meta property="og:image" content="https://afriqil.github.io/afriqil-portofolio/assets/paysim/aml_monitoring_dashboard.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://afriqil.github.io/afriqil-portofolio/project-paysim.html"/>
+  <meta name="twitter:title" content="PaySim Fraud & AML Compliance Analytics | Afriqil Wildan"/>
+  <meta name="twitter:description" content="Fraud and AML-oriented transaction-monitoring case study using 6.36M synthetic transactions, Python, SQL, machine learning, and Power BI."/>
+  <meta name="twitter:image" content="https://afriqil.github.io/afriqil-portofolio/assets/paysim/aml_monitoring_dashboard.png"/>
+
+  <link href="assets/favicon.ico" rel="icon"/>
+  <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="assets/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="assets/site.webmanifest" rel="manifest"/>
+  <meta content="#07111f" name="theme-color"/>
+
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="nav-logo" href="index.html">
+      Afriqil<span>.</span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a class="nav-link" href="index.html#home">Home</a>
+      <a class="nav-link" href="index.html#about">About</a>
+      <a class="nav-link" href="index.html#skills">Skills</a>
+      <a class="nav-link active" href="index.html#projects">Projects</a>
+      <a class="nav-link" href="index.html#resume">Resume</a>
+      <a class="nav-link" href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button aria-label="Toggle dark and light mode" class="theme-toggle" id="themeToggle">
+        <span id="themeIcon">🌙</span>
+      </button>
+
+      <button aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PROJECT HERO -->
+    <section class="section project-hero">
+      <div class="project-hero-content reveal">
+        <p class="section-label">Fraud & AML Analytics Case Study</p>
+
+        <h1>PaySim Fraud & AML Compliance Analytics</h1>
+
+        <p class="project-hero-description">
+          An end-to-end analysis of 6.36 million synthetic mobile-money transactions using Python, SQL, explainable rule-based risk scoring, machine-learning benchmarks, and Power BI. The project focuses on fraud-pattern analysis, alert prioritization, investigation workload, precision, recall, and compliance-oriented decision support.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/afriqil/paysim-fraud-compliance" target="_blank" rel="noopener noreferrer">
+            GitHub Repository
+          </a>
+
+          <a class="btn btn-secondary" href="https://www.kaggle.com/datasets/ealaxi/paysim1" target="_blank" rel="noopener noreferrer">
+            Dataset Source
+          </a>
+
+          <a class="btn btn-secondary" href="assets/Portofolio_Afriqil_Wildan.pdf" target="_blank">
+            Portfolio PDF
+          </a>
+
+          <a class="btn btn-secondary" href="index.html#projects">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT METADATA -->
+    <section class="section project-overview">
+      <div class="metadata-grid reveal">
+        <div class="metadata-card">
+          <span>Role</span>
+          <h3>Data Analyst</h3>
+        </div>
+
+        <div class="metadata-card">
+          <span>Dataset</span>
+          <h3>PaySim Synthetic Mobile Money Transactions</h3>
+        </div>
+
+        <div class="metadata-card">
+          <span>Data Volume</span>
+          <h3>6.36M Transactions</h3>
+        </div>
+
+        <div class="metadata-card">
+          <span>Tools</span>
+          <h3>Python, SQL, Scikit-learn, Power BI</h3>
+        </div>
+
+        <div class="metadata-card">
+          <span>Analytical Focus</span>
+          <h3>Fraud Detection & AML-Oriented Monitoring</h3>
+        </div>
+
+        <div class="metadata-card">
+          <span>Output</span>
+          <h3>Notebook, SQL Queries, Dashboard, README</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="section dashboard-case-study">
+      <div class="section-heading reveal">
+        <p class="section-label">Dashboard Preview</p>
+        <h2>AML transaction risk monitoring dashboard.</h2>
+      </div>
+
+      <div class="carousel reveal">
+        <button aria-label="Previous dashboard image" class="carousel-btn prev">‹</button>
+
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img
+                alt="AML transaction risk monitoring Power BI dashboard"
+                data-preview="assets/paysim/aml_monitoring_dashboard.png"
+                src="assets/paysim/aml_monitoring_dashboard.png"
+              />
+              <p>AML Transaction Risk Monitoring Dashboard</p>
+            </div>
+          </div>
+        </div>
+
+        <button aria-label="Next dashboard image" class="carousel-btn next">›</button>
+      </div>
+
+      <div class="carousel-dots reveal">
+        <button aria-label="Go to slide 1" class="carousel-dot active"></button>
+      </div>
+    </section>
+
+    <!-- WHAT I DID -->
+    <section class="section case-section">
+      <div class="section-heading reveal">
+        <p class="section-label">What I Did</p>
+        <h2>End-to-end fraud and compliance analytics workflow.</h2>
+      </div>
+
+      <div class="content-card reveal">
+        <p>
+          I analyzed 6,362,620 synthetic mobile-money transactions containing transaction type, amount, origin and destination balances, account identifiers, fraud labels, and the existing PaySim fraud flag. The dataset contains 8,213 simulated fraud cases, producing an observed fraud rate of approximately 0.129%.
+        </p>
+
+        <p>
+          I performed data-quality checks, exploratory analysis, and feature engineering in Python. The engineered features included transaction-to-balance ratios, balance-depletion behavior, transaction frequency, receiver-side velocity, high-value transaction indicators, balance discrepancies, and transaction-channel risk.
+        </p>
+
+        <p>
+          I then developed an explainable rule-based risk-scoring framework, compared it with the existing PaySim flag, Logistic Regression, and Isolation Forest, and exported a processed dataset for Power BI. The dashboard evaluates total activity, fraud concentration, high-risk alerts, precision, recall, false positives, false negatives, and a high-priority investigation queue.
+        </p>
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section class="section case-section">
+      <div class="section-heading reveal">
+        <p class="section-label">Workflow</p>
+        <h2>Project process.</h2>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <span>01</span>
+          <div>
+            <h3>Data Acquisition and Validation</h3>
+            <p>
+              Downloaded the PaySim dataset through KaggleHub and assessed dimensions, data types, missing values, duplicate records, and memory usage.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span>02</span>
+          <div>
+            <h3>Exploratory Fraud Analysis</h3>
+            <p>
+              Examined class imbalance, transaction-type distribution, fraud rate by transaction type, amount patterns, balance behavior, and simulation-day trends.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span>03</span>
+          <div>
+            <h3>Feature Engineering</h3>
+            <p>
+              Created balance-depletion, high-value, sender-frequency, receiver-velocity, balance-discrepancy, and transaction-channel risk indicators.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span>04</span>
+          <div>
+            <h3>Rule-Based AML Risk Scoring</h3>
+            <p>
+              Built an explainable weighted scoring framework that assigns Low, Medium, or High Risk classifications for investigation prioritization.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span>05</span>
+          <div>
+            <h3>Model Benchmarking</h3>
+            <p>
+              Compared the revised analytical rules with the existing PaySim flag, Logistic Regression, and Isolation Forest using fraud-oriented evaluation metrics.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span>06</span>
+          <div>
+            <h3>SQL and Power BI Reporting</h3>
+            <p>
+              Developed SQL monitoring queries and a Power BI dashboard covering risk distribution, alert outcomes, fraud-rate patterns, and the investigation queue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY INSIGHTS -->
+    <section class="section case-section">
+      <div class="section-heading reveal">
+        <p class="section-label">Key Insights</p>
+        <h2>What the analysis revealed.</h2>
+      </div>
+
+      <div class="insight-grid">
+        <article class="insight-card reveal">
+          <h3>Fraud was extremely rare</h3>
+          <p>
+            The dataset contained 8,213 fraud labels across 6.36 million transactions, resulting in an observed fraud rate of approximately 0.129%. This makes accuracy unsuitable as the primary evaluation metric.
+          </p>
+        </article>
+
+        <article class="insight-card reveal">
+          <h3>Fraud concentrated in specific channels</h3>
+          <p>
+            Simulated fraud activity was concentrated in TRANSFER and CASH_OUT transactions, making transaction type an important risk signal.
+          </p>
+        </article>
+
+        <article class="insight-card reveal">
+          <h3>The initial rules generated excessive alerts</h3>
+          <p>
+            A broad initial rule design produced millions of alerts. Revising balance logic, tolerance thresholds, risky channels, transaction ratios, and receiver velocity reduced the high-risk queue to approximately 27,000 transactions.
+          </p>
+        </article>
+
+        <article class="insight-card reveal">
+          <h3>Recall and workload must be evaluated together</h3>
+          <p>
+            The revised rules achieved approximately 97.5% recall on the synthetic fraud labels, but false positives remained materially larger than true positives. High recall alone does not establish operational effectiveness.
+          </p>
+        </article>
+
+        <article class="insight-card reveal">
+          <h3>Explainability supported investigation prioritization</h3>
+          <p>
+            Rule-based scores made the investigation queue easier to interpret than a black-box prediction alone, while machine-learning models provided useful performance benchmarks.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="section case-section">
+      <div class="section-heading reveal">
+        <p class="section-label">Recommendations</p>
+        <h2>Operational implications from the analysis.</h2>
+      </div>
+
+      <div class="recommendation-grid">
+        <div class="recommendation-card reveal">
+          <h3>Prioritize TRANSFER and CASH_OUT activity</h3>
+          <p>
+            Focus review resources on high-value transfers, cash-out transactions, and transactions that rapidly deplete the sender's balance.
+          </p>
+        </div>
+
+        <div class="recommendation-card reveal">
+          <h3>Evaluate precision and recall together</h3>
+          <p>
+            Monitor both fraud capture and false-positive workload when adjusting thresholds. A high recall rate should not be considered sufficient on its own.
+          </p>
+        </div>
+
+        <div class="recommendation-card reveal">
+          <h3>Review false-positive patterns regularly</h3>
+          <p>
+            Analyze false positives by transaction type, amount range, risk score, and account behavior to identify overly broad rules.
+          </p>
+        </div>
+
+        <div class="recommendation-card reveal">
+          <h3>Use risk-based investigation prioritization</h3>
+          <p>
+            Review higher-scoring alerts first, especially where large transaction amounts, balance depletion, and receiver velocity occur together.
+          </p>
+        </div>
+
+        <div class="recommendation-card reveal">
+          <h3>Integrate customer-risk information in practice</h3>
+          <p>
+            A real AML system should combine transaction signals with KYC risk, geography, sanctions screening, customer profiles, and investigation outcomes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL HIGHLIGHTS -->
+    <section class="section case-section">
+      <div class="section-heading reveal">
+        <p class="section-label">Technical Highlights</p>
+        <h2>Technical work behind the case study.</h2>
+      </div>
+
+      <div class="technical-highlight-grid">
+        <div class="technical-highlight-card reveal">
+          <h3>Large-Scale Python Processing</h3>
+          <p>
+            Processed more than 6.36 million transactions using Pandas and NumPy while managing memory and export size.
+          </p>
+        </div>
+
+        <div class="technical-highlight-card reveal">
+          <h3>Explainable Feature Engineering</h3>
+          <p>
+            Built balance, velocity, amount, and channel-based indicators that can be interpreted by fraud and compliance stakeholders.
+          </p>
+        </div>
+
+        <div class="technical-highlight-card reveal">
+          <h3>Model Benchmarking</h3>
+          <p>
+            Compared rule-based monitoring with Logistic Regression and Isolation Forest rather than relying on one detection method.
+          </p>
+        </div>
+
+        <div class="technical-highlight-card reveal">
+          <h3>SQL Monitoring Queries</h3>
+          <p>
+            Developed BigQuery-oriented queries for fraud rates, alert outcomes, transaction velocity, account-level risk, and confusion-matrix metrics.
+          </p>
+        </div>
+
+        <div class="technical-highlight-card reveal">
+          <h3>Stakeholder-Focused Power BI Design</h3>
+          <p>
+            Built a single-page monitoring dashboard with executive KPIs, fraud trends, risk distribution, alert outcomes, and an investigation queue.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGICAL NOTE -->
+    <section class="section case-section">
+      <div class="section-heading reveal">
+        <p class="section-label">Methodological Note</p>
+        <h2>How the results should be interpreted.</h2>
+      </div>
+
+      <div class="content-card reveal">
+        <p>
+          PaySim contains synthetic transactions and simulated fraud labels. The AML risk categories in this project are analytical alerts for investigation prioritization, not confirmed criminal activity.
+        </p>
+
+        <p>
+          The dataset does not include customer KYC profiles, geographic exposure, sanctions screening, source-of-funds information, cross-institution networks, or real case-investigation outcomes. The project should therefore be interpreted as a portfolio demonstration of transaction-risk analytics rather than a production AML compliance system.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section resume">
+      <div class="resume-card reveal">
+        <p class="section-label">Explore More</p>
+        <h2>Review the full repository or return to projects.</h2>
+
+        <div class="resume-actions">
+          <a class="btn btn-primary" href="index.html#projects">
+            Back to Projects
+          </a>
+
+          <a class="btn btn-secondary" href="https://github.com/afriqil/paysim-fraud-compliance" target="_blank" rel="noopener noreferrer">
+            GitHub Repository
+          </a>
+
+          <a class="btn btn-secondary" href="assets/CV_Afriqil_Wildan.pdf" target="_blank">
+            Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- IMAGE MODAL -->
+  <div class="image-modal">
+    <button aria-label="Close image modal" class="modal-close">×</button>
+    <img alt="PaySim AML monitoring dashboard full preview" class="modal-image" src=""/>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Afriqil Wildan. Data Analyst Portfolio.</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="https://www.linkedin.com/in/afriqil-wildan-b7bbb6221/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/afriqil" target="_blank">GitHub</a>
+      <a href="assets/CV_Afriqil_Wildan.pdf" target="_blank">Download CV</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
