@@ -37,7 +37,8 @@ if (themeToggle) {
         localStorage.setItem("theme", nextTheme);
 
         if (themeIcon) {
-            themeIcon.textContent = nextTheme === "dark" ? "🌙" : "☀️";
+            themeIcon.textContent =
+                nextTheme === "dark" ? "🌙" : "☀️";
         }
     });
 }
@@ -134,7 +135,9 @@ function animateCounters() {
     counters.forEach((counter) => {
         const target = parseFloat(counter.dataset.target);
 
-        if (Number.isNaN(target)) return;
+        if (Number.isNaN(target)) {
+            return;
+        }
 
         const duration = 1400;
         const startTime = performance.now();
@@ -142,15 +145,21 @@ function animateCounters() {
         function updateCounter(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const easedProgress =
+                1 - Math.pow(1 - progress, 3);
+
             const value = target * easedProgress;
 
-            counter.textContent = formatCounterValue(value, target);
+            counter.textContent =
+                formatCounterValue(value, target);
 
             if (progress < 1) {
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target % 1 !== 0 ? target.toFixed(1) : target.toString();
+                counter.textContent =
+                    target % 1 !== 0
+                        ? target.toFixed(1)
+                        : target.toString();
             }
         }
 
@@ -165,10 +174,15 @@ if (metricSection && counters.length > 0) {
         const counterObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting && !counterStarted) {
+                    if (
+                        entry.isIntersecting &&
+                        !counterStarted
+                    ) {
                         counterStarted = true;
                         animateCounters();
-                        counterObserver.unobserve(entry.target);
+                        counterObserver.unobserve(
+                            entry.target
+                        );
                     }
                 });
             },
@@ -191,7 +205,21 @@ if (metricSection && counters.length > 0) {
 
 const sections = getElements("section[id]");
 
+const samePageNavLinks = Array.from(navLinks).filter(
+    (link) => {
+        const href = link.getAttribute("href") || "";
+        return href.startsWith("#");
+    }
+);
+
 function setActiveNavLink() {
+    if (
+        sections.length === 0 ||
+        samePageNavLinks.length === 0
+    ) {
+        return;
+    }
+
     let currentSection = "";
 
     sections.forEach((section) => {
@@ -200,13 +228,19 @@ function setActiveNavLink() {
 
         if (
             window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
+            window.scrollY <
+                sectionTop + sectionHeight
         ) {
-            currentSection = section.getAttribute("id");
+            currentSection =
+                section.getAttribute("id");
         }
     });
 
-    navLinks.forEach((link) => {
+    if (!currentSection) {
+        return;
+    }
+
+    samePageNavLinks.forEach((link) => {
         const linkHref = link.getAttribute("href");
 
         link.classList.remove("active");
@@ -217,8 +251,15 @@ function setActiveNavLink() {
     });
 }
 
-window.addEventListener("scroll", setActiveNavLink);
-window.addEventListener("load", setActiveNavLink);
+window.addEventListener(
+    "scroll",
+    setActiveNavLink
+);
+
+window.addEventListener(
+    "load",
+    setActiveNavLink
+);
 
 
 /* =========================
@@ -226,37 +267,66 @@ window.addEventListener("load", setActiveNavLink);
    Used in project detail pages
 ========================= */
 
-const carouselTrack = getElement(".carousel-track");
-const carouselSlides = getElements(".carousel-slide");
-const prevButton = getElement(".carousel-btn.prev");
-const nextButton = getElement(".carousel-btn.next");
-const carouselDots = getElements(".carousel-dot");
+const carouselTrack =
+    getElement(".carousel-track");
+
+const carouselSlides =
+    getElements(".carousel-slide");
+
+const prevButton =
+    getElement(".carousel-btn.prev");
+
+const nextButton =
+    getElement(".carousel-btn.next");
+
+const carouselDots =
+    getElements(".carousel-dot");
 
 let currentSlide = 0;
 let carouselInterval = null;
 
 function updateCarousel(index) {
-    if (!carouselTrack || carouselSlides.length === 0) return;
+    if (
+        !carouselTrack ||
+        carouselSlides.length === 0
+    ) {
+        return;
+    }
 
     currentSlide = index;
 
     if (currentSlide < 0) {
-        currentSlide = carouselSlides.length - 1;
+        currentSlide =
+            carouselSlides.length - 1;
     }
 
-    if (currentSlide >= carouselSlides.length) {
+    if (
+        currentSlide >=
+        carouselSlides.length
+    ) {
         currentSlide = 0;
     }
 
-    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    carouselTrack.style.transform =
+        `translateX(-${currentSlide * 100}%)`;
 
-    carouselDots.forEach((dot, dotIndex) => {
-        dot.classList.toggle("active", dotIndex === currentSlide);
-    });
+    carouselDots.forEach(
+        (dot, dotIndex) => {
+            dot.classList.toggle(
+                "active",
+                dotIndex === currentSlide
+            );
+        }
+    );
 }
 
 function startCarouselAutoPlay() {
-    if (!carouselTrack || carouselSlides.length <= 1) return;
+    if (
+        !carouselTrack ||
+        carouselSlides.length <= 1
+    ) {
+        return;
+    }
 
     stopCarouselAutoPlay();
 
@@ -273,17 +343,23 @@ function stopCarouselAutoPlay() {
 }
 
 if (prevButton) {
-    prevButton.addEventListener("click", () => {
-        updateCarousel(currentSlide - 1);
-        startCarouselAutoPlay();
-    });
+    prevButton.addEventListener(
+        "click",
+        () => {
+            updateCarousel(currentSlide - 1);
+            startCarouselAutoPlay();
+        }
+    );
 }
 
 if (nextButton) {
-    nextButton.addEventListener("click", () => {
-        updateCarousel(currentSlide + 1);
-        startCarouselAutoPlay();
-    });
+    nextButton.addEventListener(
+        "click",
+        () => {
+            updateCarousel(currentSlide + 1);
+            startCarouselAutoPlay();
+        }
+    );
 }
 
 carouselDots.forEach((dot, index) => {
@@ -294,8 +370,15 @@ carouselDots.forEach((dot, index) => {
 });
 
 if (carouselTrack) {
-    carouselTrack.addEventListener("mouseenter", stopCarouselAutoPlay);
-    carouselTrack.addEventListener("mouseleave", startCarouselAutoPlay);
+    carouselTrack.addEventListener(
+        "mouseenter",
+        stopCarouselAutoPlay
+    );
+
+    carouselTrack.addEventListener(
+        "mouseleave",
+        startCarouselAutoPlay
+    );
 
     updateCarousel(0);
     startCarouselAutoPlay();
@@ -309,48 +392,73 @@ if (carouselTrack) {
 const modal = getElement(".image-modal");
 const modalImage = getElement(".modal-image");
 const modalClose = getElement(".modal-close");
-const previewImages = getElements("[data-preview]");
+
+const previewImages =
+    getElements("[data-preview]");
 
 function openImageModal(imageSource) {
-    if (!modal || !modalImage || !imageSource) return;
+    if (
+        !modal ||
+        !modalImage ||
+        !imageSource
+    ) {
+        return;
+    }
 
     modalImage.src = imageSource;
     modal.classList.add("active");
-    document.body.style.overflow = "hidden";
+
+    document.body.style.overflow =
+        "hidden";
 }
 
 function closeImageModal() {
-    if (!modal || !modalImage) return;
+    if (!modal || !modalImage) {
+        return;
+    }
 
     modal.classList.remove("active");
     modalImage.src = "";
+
     document.body.style.overflow = "";
 }
 
 previewImages.forEach((image) => {
     image.addEventListener("click", () => {
-        const imageSource = image.dataset.preview || image.src;
+        const imageSource =
+            image.dataset.preview ||
+            image.src;
+
         openImageModal(imageSource);
     });
 });
 
 if (modalClose) {
-    modalClose.addEventListener("click", closeImageModal);
+    modalClose.addEventListener(
+        "click",
+        closeImageModal
+    );
 }
 
 if (modal) {
-    modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            closeImageModal();
+    modal.addEventListener(
+        "click",
+        (event) => {
+            if (event.target === modal) {
+                closeImageModal();
+            }
         }
-    });
+    );
 }
 
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeImageModal();
+document.addEventListener(
+    "keydown",
+    (event) => {
+        if (event.key === "Escape") {
+            closeImageModal();
+        }
     }
-});
+);
 
 
 /* =========================
@@ -358,23 +466,110 @@ document.addEventListener("keydown", (event) => {
 ========================= */
 
 const interactiveCards = getElements(
-    ".project-card, .technical-card, .about-card, .metric-card, .metadata-card, .insight-card, .recommendation-card, .technical-highlight-card"
+    `
+    .project-card,
+    .portfolio-project-card,
+    .technical-card,
+    .about-card,
+    .metric-card,
+    .metadata-card,
+    .insight-card,
+    .recommendation-card,
+    .technical-highlight-card,
+    .project-stat-card
+    `
 );
 
 interactiveCards.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
+    card.addEventListener(
+        "mousemove",
+        (event) => {
+            const rect =
+                card.getBoundingClientRect();
 
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-    });
+            const x =
+                event.clientX - rect.left;
+
+            const y =
+                event.clientY - rect.top;
+
+            card.style.setProperty(
+                "--mouse-x",
+                `${x}px`
+            );
+
+            card.style.setProperty(
+                "--mouse-y",
+                `${y}px`
+            );
+        }
+    );
 });
 
 
 /* =========================
-   SAFETY: SHOW CONTENT IF JS LOADS LATE
+   PROJECT FILTERS
+   Used on projects.html
+========================= */
+
+const projectFilterButtons =
+    getElements(".project-filter");
+
+const portfolioProjectCards =
+    getElements(".portfolio-project-card");
+
+projectFilterButtons.forEach((button) => {
+    button.addEventListener(
+        "click",
+        () => {
+            const selectedFilter =
+                button.dataset.filter || "all";
+
+            projectFilterButtons.forEach(
+                (filterButton) => {
+                    filterButton.classList.toggle(
+                        "active",
+                        filterButton === button
+                    );
+                }
+            );
+
+            portfolioProjectCards.forEach(
+                (card) => {
+                    const categories =
+                        (
+                            card.dataset.category ||
+                            ""
+                        )
+                            .split(" ")
+                            .filter(Boolean);
+
+                    const shouldShow =
+                        selectedFilter === "all" ||
+                        categories.includes(
+                            selectedFilter
+                        );
+
+                    card.classList.toggle(
+                        "is-hidden",
+                        !shouldShow
+                    );
+
+                    if (shouldShow) {
+                        card.classList.add(
+                            "active"
+                        );
+                    }
+                }
+            );
+        }
+    );
+});
+
+
+/* =========================
+   SAFETY: SHOW CONTENT
+   IF JAVASCRIPT LOADS LATE
 ========================= */
 
 setTimeout(() => {
